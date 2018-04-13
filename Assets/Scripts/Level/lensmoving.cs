@@ -5,7 +5,7 @@ using UnityEngine;
 public class lensmoving : MonoBehaviour
 {
     public bool enable { get; set; }
-
+    private bool turnStatus=false;
     // Use this for initialization
     void Start()
     {
@@ -15,6 +15,15 @@ public class lensmoving : MonoBehaviour
 
     public void Rotate()
     {
-        transform.rotation = Quaternion.Euler(0,0,100);
+        if (turnStatus == false)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 100);
+            turnStatus = true;
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 137);
+            turnStatus = false;
+        }
     }
 }

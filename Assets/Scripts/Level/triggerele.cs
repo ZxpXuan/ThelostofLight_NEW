@@ -23,7 +23,7 @@ public class triggerele : MonoBehaviour
 
         print("Trigger");
 
-        if (OnTrigger != null) OnTrigger.Invoke();
+       OnTrigger.Invoke();
     }
 
 }
